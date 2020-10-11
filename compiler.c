@@ -8,19 +8,19 @@ int k ;
 int flag; //flag 1表明是数字，2是关键字或标识符
 char token[100];
 
-bool isBlank(char ch){
+int isBlank(char ch){
     if (ch == ' ' || ch == '\t' || ch == '\r' || ch == '\n'){
-        return true;
+        return 1;
     }else {
-        return false;
+        return 0;
     }
 }
 
-bool isSymbol(char ch){
+int isSymbol(char ch){
     if(ch == ':' || ch == '+' || ch == '*' || ch == ',' || ch == '(' || ch == ')')
-        return true;
+        return 1;
     else {
-        return false;
+        return 0;
     }
 }
 
